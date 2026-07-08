@@ -1,5 +1,5 @@
 function play() {
-    var buttons = document.querySelectorAll("#btn button");
+    var buttons = document.querySelectorAll(".btn, .title");
     for (let i=0;i<buttons.length;i++) {
         buttons[i].style.display = "none";
     }
