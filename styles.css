@@ -61,7 +61,7 @@
 	position: absolute;
 	margin-top: 4vh;		/* thickness of flag1 */
 	width: 35vw;
-	height: 4h;
+	height: 4vh;
 	background-color: #FFFFFF;
 	z-index: -1;
 }
