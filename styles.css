@@ -47,6 +47,7 @@
 }
 
 #flag1 {
+	visibility: hidden;
 	position: absolute;
 	margin-top: -3px;		/* to account for border thickness */
 	margin-left: -3px;
@@ -58,6 +59,7 @@
 }
 
 #flag2 {
+	visibility: hidden;
 	position: absolute;
 	margin-top: 4vh;		/* thickness of flag1 */
 	width: 35vw;
@@ -67,6 +69,7 @@
 }
 
 #flag3 {
+	visibility: hidden;
 	position: absolute;
 	margin-top: 4vh;
 	width: 35vw;
