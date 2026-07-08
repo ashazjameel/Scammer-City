@@ -46,34 +46,32 @@
 	border-width: 3px;
 }
 
-#flag1 {
+.flag1 {
 	visibility: hidden;
 	position: absolute;
 	margin-top: -3px;		/* to account for border thickness */
 	margin-left: -3px;
-	width: 35vw;
+	width: inherit;
 	height: 4vh;		/* 12vh ÷ 3 */
 	border-radius: 25px 25px 0px 0px;
 	background-color: #FF671F;
 	z-index: -1;		/* to prevent overlapping with button text */
 }
 
-#flag2 {
+.flag2 {
 	visibility: hidden;
 	position: absolute;
 	margin-top: 4vh;		/* thickness of flag1 */
-	width: 35vw;
-	height: 4vh;
+	width: inherit; height: inherit;
 	background-color: #FFFFFF;
 	z-index: -1;
 }
 
-#flag3 {
+.flag3 {
 	visibility: hidden;
 	position: absolute;
-	margin-top: 4vh;
-	width: 35vw;
-	height: 4vh;
+	margin-top: inherit;
+	width: inherit; height: inherit;
 	border-radius: 0px 0px 25px 25px;
 	background-color: #046A38;
 	z-index: -1;
