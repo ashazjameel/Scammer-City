@@ -44,3 +44,35 @@
 	border-radius: 25px;
 	border-width: 3px;
 }
+
+#flag1 {
+	position: absolute;
+	margin-top: -3px;		/* to account for border thickness */
+	margin-left: -3px;
+	width: 35vw;
+	height: 4vh;		/* 12vh ÷ 3 */
+	border-radius: 25px 25px 0px 0px;
+	background-color: #FF671F;
+	z-index: -1;		/* to prevent overlapping with button text */
+}
+
+#flag2 {
+	position: absolute;
+	margin-top: 4vh;		/* thickness of flag1 */
+	width: 35vw;
+	height: 4h;
+	background-color: #FFFFFF;
+	z-index: -1;
+}
+
+#flag3 {
+	position: absolute;
+	margin-top: 4vh;
+	width: 35vw;
+	height: 4vh;
+	border-radius: 0px 0px 25px 25px;
+	background-color: #046A38;
+	z-index: -1;
+}
+
+
