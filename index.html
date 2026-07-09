@@ -10,13 +10,13 @@
   <body class="body">
     <h1 class="title">Scammer City</h1>
 	<div class="btn" id="btn">
-		<button type="button" style="font-size: 6.2vh; line-height: 14vh;" onclick="play()" onmouseenter="hover(this)" onmouseleave="unhover(this)">
+		<button type="button" style="font-size: 6.2vh; line-height: 14vh;" onclick="play()" onmouseenter="hover(this,false)" onmouseleave="unhover(this,false)" ontouchstart="hover(this,true)" ontouchend="unhover(this,true)">
 			<div class="flag1"><div class="flag2"><div class="flag3"></div></div></div>
 			Play</button>
-		<button type="button" style="width: 17vw; transform: translate(-17.5vw,0%);" onmouseenter="hover(this)" onmouseleave="unhover(this)">
+		<button type="button" style="width: 17vw; transform: translate(-17.5vw,0%);" onmouseenter="hover(this,false)" onmouseleave="unhover(this,false)" ontouchstart="hover(this,true)" ontouchend="unhover(this,true)">
 			<div class="flag1"><div class="flag2"><div class="flag3"></div></div></div>
 			Profile</button>
-		<button type="button" style="width: 17vw; transform: translate(-16.5vw,0%);" onmouseenter="hover(this)" onmouseleave="unhover(this)">
+		<button type="button" style="width: 17vw; transform: translate(-16.5vw,0%);" onmouseenter="hover(this,false)" onmouseleave="unhover(this,false)" ontouchstart="hover(this,true)" ontouchend="unhover(this,true)">
 			<div class="flag1"><div class="flag2"><div class="flag3"></div></div></div>
 			Settings</button>
 	</div>
