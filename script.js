@@ -1,7 +1,9 @@
 const touch = matchMedia("(hover: none)").matches;
+var mode = 0;
 
 function play() {
     var buttons = document.querySelectorAll(".btn, .title");
+	document.querySelectorAll(".canvas")[0].style.visibility = "visible";
     for (let i=0;i<buttons.length;i++) {
         buttons[i].style.display = "none";
     }
