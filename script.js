@@ -5,6 +5,7 @@ function play() {
     for (let i=0;i<buttons.length;i++) {
         buttons[i].style.display = "none";
     }
+	document.querySelectorAll(".body")[0].style.backgroundImage = "none";
 
 	var canv = document.querySelectorAll(".canvas")[0];
 	canv.style.visibility = "visible";
