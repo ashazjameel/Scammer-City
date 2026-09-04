@@ -1,5 +1,4 @@
 const touch = matchMedia("(hover: none)").matches;
-var mode = 0;
 
 function play() {
     var buttons = document.querySelectorAll(".btn, .title");
