@@ -9,6 +9,9 @@ function play() {
 	var canv = document.querySelectorAll(".canvas")[0];
 	canv.style.visibility = "visible";
 	var gl = canv.getContext("webgl");
+	if (!gl) {
+		return;
+	}
 }
 
 function hover(x, check) {
