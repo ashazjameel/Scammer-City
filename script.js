@@ -32,3 +32,19 @@ function unhover(x, check) {
         }
     }
 }
+
+functionn createShader(gl, type, source) {
+	var shader = gl.createShader(type);
+	gl.shaderSource(shader, source);
+	gl.compileShader(shader);
+	var success = gl.getShaderParameter(shader, gl.COMPILE_STATUS);
+	if (success) {
+		return shader;
+	}
+	
+	console.log(gl.getShaderInfoLog(shader));
+	gl.deleteShader(shader);
+}
+
+import vertexShaderSource from "/vertex-shader.glsl" with {type: text};
+import fragmentShaderSource from "/fragment-shader.glsl" with {type: text};
