@@ -33,7 +33,7 @@ function unhover(x, check) {
     }
 }
 
-functionn createShader(gl, type, source) {
+function createShader(gl, type, source) {
 	var shader = gl.createShader(type);
 	gl.shaderSource(shader, source);
 	gl.compileShader(shader);
