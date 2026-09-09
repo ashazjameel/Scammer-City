@@ -1,4 +1,4 @@
-var vertexShaderSource2 = fetch("vertex-shader.glsl")
+var vertexShaderSource = fetch("vertex-shader.glsl")
 	.then(response => response.text())
 	.then(text => console.log(text));
 
@@ -65,7 +65,7 @@ function temp() {
 	if (!gl) {
 		return;
 	}
-	var vertexShaderSource = document.querySelector("#vertex-shader-2d").text;
+
 	var fragmentShaderSource = document.querySelector("#fragment-shader-2d").text;
 
 	var vertexShader = createShader(gl, gl.VERTEX_SHADER, vertexShaderSource);
