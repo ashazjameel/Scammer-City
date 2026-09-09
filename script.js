@@ -63,7 +63,6 @@ function temp() {
 	}
 	var vertexShaderSource = document.querySelector("#vertex-shader-2d").text;
 	var fragmentShaderSource = document.querySelector("#fragment-shader-2d").text;
-	console.log(vertexShaderSource);
 
 	var vertexShader = createShader(gl, gl.VERTEX_SHADER, vertexShaderSource);
 	var fragmentShader = createShader(gl, gl.FRAGMENT_SHADER, fragmentShaderSource);
