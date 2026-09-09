@@ -63,8 +63,8 @@ function temp() {
 	if (!gl) {
 		return;
 	}
-	var vertexShaderSource = document.getElementById("vertex_shader");
-	var fragmentShaderSource = document.getElementById("fragment_shader");
+	var vertexShaderSource = document.querySelector("#vertex-shader-2d").text;
+	var fragmentShaderSource = document.querySelector("#fragment-shader-2d").text;
 	console.log(vertexShaderSource);
 
 	var vertexShader = createShader(gl, gl.VERTEX_SHADER, vertexShaderSource);
