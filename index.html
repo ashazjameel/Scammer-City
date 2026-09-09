@@ -24,6 +24,18 @@
 	</div>
 	<canvas class="canvas">
 		Your browser doesn't support the HTML Canvas tag.
+		<script id="vertex-shader-2d" type="notjs">
+			attribute vec4 a_position;
+			void main() {
+				gl_Position = a_position;
+			}
+		</script>
+		<script id="fragment-shader-2d" type="notjs">
+			precision mediump float;
+			void main() {
+				gl_FragColor = vec4(1,1,0,1);
+			}
+		</script>
 	</canvas>
   </body>
 </html>
