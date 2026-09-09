@@ -69,7 +69,7 @@ function temp() {
 	var fragmentShader = createShader(gl, gl.FRAGMENT_SHADER, fragmentShaderSource);
 
 	var program = createProgram(gl, vertexShader, fragmentShader);
-	var positionAttributeLocation = gl.getAttributeLocation(program, "a_position");
+	var positionAttributeLocation = gl.getAttribLocation(program, "a_position");
 	var positionBuffer = gl.createBuffer();
 	gl.bindBuffer(gl.ARRAY_BUFFER, positionBuffer)
 
