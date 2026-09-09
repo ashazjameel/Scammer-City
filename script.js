@@ -46,5 +46,5 @@ function createShader(gl, type, source) {
 	gl.deleteShader(shader);
 }
 
-import vertexShaderSource from "/vertex-shader.glsl" with {type: text};
-import fragmentShaderSource from "/fragment-shader.glsl" with {type: text};
+var vertexShaderSource = document.getElementById("vertex_shader");
+var fragmentShaderSource = document.getElementById("fragment_shader");
