@@ -6,13 +6,7 @@ function play() {
         buttons[i].style.display = "none";
     }
 	document.querySelectorAll(".body")[0].style.backgroundImage = "none";
-
-	var canv = document.querySelectorAll(".canvas")[0];
-	canv.style.visibility = "visible";
-	var gl = canv.getContext("webgl");
-	if (!gl) {
-		return;
-	}
+	temp(gl);
 }
 
 function hover(x, check) {
@@ -46,5 +40,66 @@ function createShader(gl, type, source) {
 	gl.deleteShader(shader);
 }
 
-var vertexShaderSource = document.getElementById("vertex_shader");
-var fragmentShaderSource = document.getElementById("fragment_shader");
+function createProgram(gl, vertexShader, fragmentShader) {
+	var program = gl.createProgram();
+	gl.attachShader(program, vertexShader);
+	gl.attachShader(program, fragmentShader);
+	gl.linkProgram(program);
+	var success = gl.getProgramParameter(program, gl.LINK_STATUS);
+	if (success) {
+		return program;
+	}
+	
+	console.log(gl.getProgramInfoLog(program));
+	gl.deleteProgram(program);
+}
+
+	
+
+function temp(gl) {
+	var canv = document.querySelectorAll(".canvas")[0];
+	canv.style.visibility = "visible";
+	var gl = canv.getContext("webgl");
+	if (!gl) {
+		return;
+	}
+	var vertexShaderSource = document.getElementById("vertex_shader");
+	var fragmentShaderSource = document.getElementById("fragment_shader");
+	console.log(vertexShaderSource);
+
+	var vertexShader = createShader(gl, gl.VERTEX_SHADER, vertexShaderSource);
+	var fragmentShader = createShader(gl, gl.FRAGMENT_SHADER, fragmentShaderSource);
+
+	var program = createProgram(gl, vertexShader, fragmentShader);
+	var positionAttributeLocation = gl.getAttributeLocation(program, "a_position");
+	var positionBuffer = gl.createBuffer();
+	gl.bindBuffer(gl.ARRAY_BUFFER, positionBuffer)
+
+	var positions = [
+		0,0,
+		0, 0.5,
+		0.7,0,
+	];
+	gl.bufferData(gl.ARRAY_BUFFER, new Float32Array(positions), gl.STATIC_DRAW);
+
+	gl.viewport(0, 0, gl.canvas.width, gl.canvas.height);
+	gl.clearColor(0, 0, 0, 0,);
+	gl.clear(gl.COLOR_BUFFER_BIT);
+	gl.useProgram(program);
+	gl.enableVertexAttribArray(positionAttributeLocation);
+
+	gl.bindBuffer(gl.ARRAY_BUFFER, positionBuffer);
+
+	var size = 2;
+	var type = gl.FLOAT;
+	var normalize = false;
+	var stride = 0;
+	var offset = 0;
+	gl.vertexAttribPointer(
+		positionAttributeLocation, size, type, normalize, stride, offset);
+
+	var primitiveType = gl.TRIANGLES;
+	var offset = 0;
+	var count = 3;
+	gl.drawArrays(primitiveType, offset, count);
+}
