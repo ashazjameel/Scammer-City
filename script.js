@@ -54,8 +54,6 @@ function createProgram(gl, vertexShader, fragmentShader) {
 	gl.deleteProgram(program);
 }
 
-	
-
 function temp() {
 	var canv = document.querySelectorAll(".canvas")[0];
 	canv.style.visibility = "visible";
