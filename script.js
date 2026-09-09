@@ -1,6 +1,7 @@
-var vertexShaderSource = fetch("vertex-shader.glsl")
+fetch("vertex-shader.glsl")
 	.then(response => response.text())
-	.then(text => console.log(text));
+	.then(text => console.log(text))
+	.then(text => {var vertexShaderSource = text});
 
 const touch = matchMedia("(hover: none)").matches;
 
