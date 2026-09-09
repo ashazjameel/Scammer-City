@@ -1,8 +1,12 @@
 var vertexShaderSource;
+var fragmentShaderSource;
 
 fetch("vertex-shader.glsl")
 	.then(response => response.text())
-	.then(text => {vertexShaderSource = text})	
+	.then(text => {vertexShaderSource = text})
+fetch("fragment-shader.glsl")
+	.then(response => response.text())
+	.then(text => {fragmentShaderSource = text})	
 
 const touch = matchMedia("(hover: none)").matches;
 
@@ -68,8 +72,6 @@ function temp() {
 	if (!gl) {
 		return;
 	}
-
-	var fragmentShaderSource = document.querySelector("#fragment-shader-2d").text;
 
 	var vertexShader = createShader(gl, gl.VERTEX_SHADER, vertexShaderSource);
 	var fragmentShader = createShader(gl, gl.FRAGMENT_SHADER, fragmentShaderSource);
