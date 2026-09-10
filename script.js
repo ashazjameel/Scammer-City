@@ -1,10 +1,10 @@
 var vertexShaderSource;
 var fragmentShaderSource;
 
-fetch("vertex-shader.glsl")
+fetch("vertex-shader.vert")
 	.then(response => response.text())
 	.then(text => {vertexShaderSource = text})
-fetch("fragment-shader.glsl")
+fetch("fragment-shader.frag")
 	.then(response => response.text())
 	.then(text => {fragmentShaderSource = text})	
 
