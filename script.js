@@ -16,7 +16,7 @@ function play() {
         buttons[i].style.display = "none";
     }
 	document.querySelectorAll(".body")[0].style.backgroundImage = "none";
-	temp();
+	render();
 }
 
 function hover(x, check) {
@@ -64,7 +64,7 @@ function createProgram(gl, vertexShader, fragmentShader) {
 	gl.deleteProgram(program);
 }
 
-function temp() {
+function render() {
 	var canv = document.querySelectorAll(".canvas")[0];
 	canv.style.visibility = "visible";
 	var gl = canv.getContext("webgl");
