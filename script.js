@@ -80,11 +80,11 @@ function render() {
 	var positionBuffer = gl.createBuffer();
 	gl.bindBuffer(gl.ARRAY_BUFFER, positionBuffer)
 
-	var positions = [
+	var positions = new Float32Array([
 		0,0.5, 1,0,0,
 		-0.5,-0.3, 0,1,0,
 		0.5,-0.3, 0,0,1,
-	];
+	]);
 	var FSIZE = positions.BYTES_PER_ELEMENT;
 	gl.bufferData(gl.ARRAY_BUFFER, new Float32Array(positions), gl.STATIC_DRAW);
 	gl.bindBuffer(gl.ARRAY_BUFFER, positionBuffer);
