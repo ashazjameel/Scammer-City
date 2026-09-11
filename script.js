@@ -76,7 +76,6 @@ function render() {
 	var fragmentShader = createShader(gl, gl.FRAGMENT_SHADER, fragmentShaderSource);
 
 	var program = createProgram(gl, vertexShader, fragmentShader);
-	var positionAttributeLocation = gl.getAttribLocation(program, "a_position");
 	var positionBuffer = gl.createBuffer();
 	gl.bindBuffer(gl.ARRAY_BUFFER, positionBuffer)
 
@@ -89,6 +88,7 @@ function render() {
 	gl.bufferData(gl.ARRAY_BUFFER, new Float32Array(positions), gl.STATIC_DRAW);
 	gl.bindBuffer(gl.ARRAY_BUFFER, positionBuffer);
 
+	var positionAttributeLocation = gl.getAttribLocation(program, "a_position");
 	var size = 2;
 	var type = gl.FLOAT;
 	var normalize = false;
