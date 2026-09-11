@@ -99,7 +99,7 @@ function render() {
 	var size = 2;
 	var type = gl.FLOAT;
 	var normalize = false;
-	var stride = FSIZE * 6;
+	var stride = FSIZE * 5;
 	var offset = 0;
 	gl.vertexAttribPointer(
 		positionAttributeLocation, size, type, normalize, stride, offset);
