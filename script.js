@@ -89,10 +89,6 @@ function render() {
 	gl.bufferData(gl.ARRAY_BUFFER, new Float32Array(positions), gl.STATIC_DRAW);
 	gl.bindBuffer(gl.ARRAY_BUFFER, positionBuffer);
 	
-	gl.viewport(0, 0, gl.canvas.width, gl.canvas.height);
-	gl.clearColor(0, 0, 0, 0,);
-	gl.clear(gl.COLOR_BUFFER_BIT);
-	gl.useProgram(program);
 	gl.enableVertexAttribArray(positionAttributeLocation);
 
 	var size = 2;
@@ -106,5 +102,10 @@ function render() {
 	var primitiveType = gl.TRIANGLES;
 	var offset = 0;
 	var count = 3;
+	
+	gl.viewport(0, 0, gl.canvas.width, gl.canvas.height);
+	gl.clearColor(0, 0, 0, 0,);
+	gl.clear(gl.COLOR_BUFFER_BIT);
+	gl.useProgram(program);
 	gl.drawArrays(primitiveType, offset, count);
 }
