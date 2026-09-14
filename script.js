@@ -98,6 +98,16 @@ function render() {
 		positionAttributeLocation, size, type, normalize, stride, offset);
 	gl.enableVertexAttribArray(positionAttributeLocation);
 
+	var colour = gl.getAttribLocation(program, "v_colour");
+	var size = 3;
+	var type = gl.FLOAT;
+	var normalize = false;
+	var stride = FSIZE * 5;
+	var offset = FSIZE * 2;
+	gl.vertexAttribPointer(
+		colour, size, type, normalize, stride, offset);
+	gl.enableVertexAttribArray(colour);
+
 	var primitiveType = gl.TRIANGLES;
 	var offset = 0;
 	var count = 3;
