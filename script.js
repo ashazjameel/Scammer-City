@@ -98,7 +98,7 @@ function render() {
 		positionAttributeLocation, size, type, normalize, stride, offset);
 	gl.enableVertexAttribArray(positionAttributeLocation);
 
-	var colour = gl.getAttribLocation(program, "v_colour");
+	var colour = gl.getAttribLocation(program, "colour");
 	var size = 3;
 	var type = gl.FLOAT;
 	var normalize = false;
