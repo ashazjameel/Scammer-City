@@ -37,6 +37,10 @@ function unhover(x, check) {
     }
 }
 
+function fetchData() {
+	fetch("/api/test");
+}
+
 function createShader(gl, type, source) {
 	var shader = gl.createShader(type);
 	gl.shaderSource(shader, source);
